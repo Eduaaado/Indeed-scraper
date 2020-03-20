@@ -6,7 +6,7 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 
-driver = webdriver.Chrome(executable_path = 'tool/chromedriver')
+driver = webdriver.Chrome(executable_path = 'tools/chromedriver')
 driver.get("https://www.indeed.com.br/")
 time.sleep(1)
 
