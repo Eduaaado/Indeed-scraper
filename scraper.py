@@ -7,16 +7,19 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import numpy as np
 
+inputwhat = input('Key words to search: ')
+inputwhere = input('Where do you want to work: ')
 pages = 2
+
 driver = webdriver.Chrome(executable_path = 'tools/chromedriver')
 driver.get("https://www.indeed.com.br/")
 time.sleep(1)
 
 what = driver.find_element_by_id('text-input-what')
-what.send_keys('python')
+what.send_keys(inputwhat)
 
 where = driver.find_element_by_id('text-input-where')
-where.send_keys('São Paulo')
+where.send_keys(inputwhere)
 where.submit()
 time.sleep(1)
 
@@ -33,7 +36,7 @@ if pages > 1:
     joblinks = []
     for i in range(1, pages+1):
         print('============================\n page', i)
-        nextpage = driver.find_element_by_class_name('np')
+        nextpage = driver.find_element_by_class_name("np")
         nextpage.click()
         time.sleep(2)
         try:
