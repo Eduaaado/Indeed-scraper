@@ -5,7 +5,6 @@ from selenium.webdriver.common.by import By
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
-import numpy as np
 
 inputwhat = input('Key words to search: ')
 inputwhere = input('Where do you want to work: ')
