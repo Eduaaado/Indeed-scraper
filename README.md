@@ -11,4 +11,4 @@ If you don't have them, just install by pasting the command bellow in command pr
 > pip install selenium requests bs4 pandas
 ```
 ## Executing
-Now, you can just run `scraper.py` and the program will ask the keywords. It will scrap the pages and return for you all the jobs.
+Run `scraper.py` and the program will ask the keywords. It should return for you all jobs available.
